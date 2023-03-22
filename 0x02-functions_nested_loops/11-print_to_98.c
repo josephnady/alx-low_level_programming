@@ -2,12 +2,8 @@
 #include <stdio.h>
 /**
  * print_to_98 - print all numbers from n to 98
- * @n number to start from
+ * @n: number to start from
  * Return:returns the listy of numbers
- */
-/**
- * print_to_98 - Print all natural numbers from n to 98
- * @n: int type number
  */
 void print_to_98(int n)
 {
