@@ -5,7 +5,13 @@
  * @str: set of charachters
  * Return: Always 0 (Success)
  */
-int _putchar(char *str)
+int _putchar(char str)
 {
-	return (write(1, &str, sizeof(str)));
+	return (write(1, str, 1));
 }
+/*
+ * int _putchar(char *str)
+ * {
+ *	return (write(1, &str, sizeof(str)));
+ * }
+ */
