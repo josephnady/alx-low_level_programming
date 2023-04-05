@@ -6,7 +6,7 @@
  */
 void _puts_recursion(char *s)
 {
-	printf("%c",*s);
+	printf("%c", *s);
 
 	if (*s)
 	{
