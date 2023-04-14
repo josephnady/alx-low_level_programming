@@ -1,10 +1,11 @@
 #include <unistd.h>
+
 /**
- * _putchar - print char
+ * _putchar - function that print char
  * @str: the char to be printed
  * Return: void
  */
-void _putchar(char str)
+int _putchar(char str)
 {
-	return ((write(1, @str, 1)));
+	return ((write(1, &str, 1)));
 }
