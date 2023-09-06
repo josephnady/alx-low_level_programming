@@ -1,14 +1,5 @@
-/*
- * File_name: main.h
- * Created: 5th of September, 2023
- * Auth: Joseph Nady Fouad
- * Size: undefined
- * Project: alx-low_level_programming
- * Status: submitted.
- */
-
 #ifndef MAIN_H
-#define MAIN__H "main.h"
+#define MAIN_H "main.h"
 
 #include <unistd.h>
 #include <stdlib.h>
