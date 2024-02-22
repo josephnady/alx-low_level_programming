@@ -1,0 +1,14 @@
+CC=gcc
+SRC=main.c school.c
+OBJ=main.o school.o
+NAME=school
+
+all: $(NAME)
+
+$(NAME): $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
+
+%.o: %.c
+	gcc    -c -o $@ $^
+	# $^ Outputs all prerequisites newer than the target
+	# ‘%’ in a prerequisite of a pattern rule stands for the same stem that was matched by the ‘%’ in the target.
