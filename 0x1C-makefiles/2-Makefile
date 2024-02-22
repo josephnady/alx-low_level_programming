@@ -2,12 +2,9 @@ CC=gcc
 SRC=main.c school.c
 OBJ=main.o school.o
 NAME=school
-
-all: $(NAME)
-
+all:$(NAME)
 $(NAME): $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
-
 %.o: %.c
 	gcc    -c -o $@ $^
 	# $^ Outputs all prerequisites newer than the target
