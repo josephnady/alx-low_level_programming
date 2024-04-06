@@ -12,6 +12,7 @@ param:
     The island doesn’t have “lakes” (water inside that isn’t connected to the water around the island).
 '''
 def island_perimeter(grid):
+    '''Doc'''
     landzone = 0
     cells = 0
     for row in grid:
