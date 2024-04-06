@@ -8,10 +8,9 @@
 <p><br></p>
 
 <h2>Resources</h2>
-
 <p><strong>Read or watch</strong>:</p>
-
 <ul>
+<li><a href="https://www.gnu.org/software/make/manual/make.html#Syntax-of-Functions" target="_blank">Man File</li>
 <li><a href="/rltoken/pWZA00v30Bk4bNIv9atGeg" title="What is a makefile and how does it work" target="_blank">What is a makefile and how does it work</a></li>
 <li><a href="/rltoken/1AUviCUw3TrznESzWbrKAQ" title="Installing the make utility" target="_blank">Installing the make utility</a></li>
 <li><a href="/rltoken/vQFeXLq1izNua2z2dVl5Yg" title="make-official documentation" target="_blank">make-official documentation</a></li>
