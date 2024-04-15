@@ -1,6 +1,7 @@
-#include <stdlib.h>
-#include <string.h>
 #include "lists.h"
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 
 /**
  * _strlen - finds the length of a string
@@ -8,7 +9,7 @@
  *
  * Return: length of string
  */
-unsigned int _strlen(char *str)
+unsigned int _strlen(const char *str)
 {
 	unsigned int i;
 
@@ -27,28 +28,21 @@ unsigned int _strlen(char *str)
 list_t *add_node_end(list_t **head, const char *str)
 {
 	list_t *new, *tmp;
-
-	if (str == NULL)
-		return (NULL);
 	new = malloc(sizeof(list_t));
-	if (new == NULL)
-		return (NULL);
 	new->str = strdup(str);
-	if (new->str == NULL)
-	{
-		free(new);
-		return (NULL);
-	}
-	new->len = _strlen(new->str);
+	new->len = _strlen(str);
 	new->next = NULL;
+	/*traverse the linked list*/
+	tmp = *head;
 	if (*head == NULL)
 	{
 		*head = new;
-		return (new);
+		return (*head);
 	}
-	tmp = *head;
-	while (tmp->next)
+	while (tmp->next != NULL)
+	{
 		tmp = tmp->next;
+	}
 	tmp->next = new;
-	return (new);
+	return (*head);
 }
