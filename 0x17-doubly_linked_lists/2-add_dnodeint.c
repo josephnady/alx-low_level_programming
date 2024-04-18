@@ -23,10 +23,10 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 		return (new);
 	}
 
-	while (temp->next != NULL)
-		temp = temp->next;
-	temp->next = new;
-	new->prev = temp;
-
+	while (temp->prev != NULL)
+		temp = temp->prev;
+	temp->prev = new;
+	new->next = temp;
+	*head = new;
 	return (new);
 }
