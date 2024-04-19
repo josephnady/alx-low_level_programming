@@ -14,7 +14,8 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	dlistint_t *cur;
 	unsigned int len = 0;
 	unsigned int i;
-
+	
+	/* calc the length if the list */
 	cur = *h;
 	while (cur != NULL)
 	{
@@ -27,8 +28,8 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	new->next = NULL;
 	new->prev = NULL;
 
-	if (*h == NULL || idx == 0)
-		return (add_dnodeint(&(*h), n));
+	if (idx == 0)
+		return (add_dnodeint(h, n));
 
 	if (idx > len)
 		return (NULL);
@@ -38,11 +39,11 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 
 	tmp = *h;
 
-	for (i = 0; i < idx && tmp->next != NULL; i++)
+	for (i = 0; i < idx && tmp != NULL; i++)
 	{
 		tmp = tmp->next;
 	}
-
+	new->prev = tmp->prev;
 	tmp->prev->next = new;
 	new->next = tmp;
 	tmp->prev = new;
