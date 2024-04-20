@@ -9,15 +9,15 @@
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	dlistint_t *tmp = *h, *new, *cur = *h;
-       	unsigned int i, len = 0;
-	
+	unsigned int i, len = 0;
+
 	while (cur->next != NULL)
 	{
 		len++;
 		cur = cur->next;
-	}	
+	}
 
-	if(idx > len)
+	if (idx > len)
 		return (NULL);
 
 	if (idx == 0)
