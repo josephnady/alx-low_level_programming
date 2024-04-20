@@ -24,6 +24,7 @@ int main() {
         for (int j = i; j < 1000; j++) { // Avoid duplicate pairs
             int product = i * j;
             if (is_palindrome(product) && product > largest_palindrome) {
+		printf("i (%d)* j (%d) = (%d)\n",i,j,product);
                 largest_palindrome = product;
             }
         }
