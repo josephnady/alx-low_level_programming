@@ -28,7 +28,12 @@ int main() {
             }
         }
     }
-    printf("%d\n",largest_palindrome);
-    return (0);
-}
+    // Save the result in the file
+    FILE *file = fopen("102-result", "w");
+    if (file != NULL) {
+        fprintf(file, "%d", largest_palindrome);
+        fclose(file);
+    }
 
+    return 0;
+}
